@@ -1,17 +1,21 @@
 // Our about us page component
 import Banner from '../../components/Banner'
-import imgAbtUs from '../../assets/kasa-about-us-valeurs.svg'
+import imgAbtUs from '../../assets/kasa-about-us-valeurs.png'
 import Collapse from '../../components/Collapse'
 import { about } from '../../datas/about'
 import './_index.scss'
 
 function About() {
   return (
-    <main>
-      <Banner image={imgAbtUs} />
+    <main className="aboutPage">
+      <Banner className="aboutBanner" image={imgAbtUs} />
       <div className="aboutSection">
         {about.map((item) => (
-          <Collapse title={item.title} description={item.description} />
+          <Collapse
+            title={item.title}
+            description={item.description}
+            id={item.id}
+          />
         ))}
       </div>
     </main>

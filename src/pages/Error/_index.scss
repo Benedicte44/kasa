@@ -1,4 +1,43 @@
-.main {
+$textMainColor: #ff6060;
+$textImgColor: white;
+$containerBg: #f7f7f7;
+$textMainSize: 24px;
+
+.errorPage {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  color: $textMainColor;
+  h1 {
+    font-size: $textMainSize * 12;
+    margin: 169px 0px 66px 0;
+  }
+  p {
+    font-size: $textMainSize * 1.5;
+    margin-bottom: 182px;
+  }
+  .welcomeLink {
+    color: $textMainColor;
+    font-size: $textMainSize * 0.75;
+    margin-bottom: 150px;
+  }
+}
+
+/* // The style for mobile phone screen */
+@media only screen and (max-width: 767px) {
+  .errorPage {
+    h1 {
+      font-size: $textMainSize * 4;
+      margin-top: 195px;
+      margin-bottom: 11px;
+    }
+    p {
+      font-size: $textMainSize * 0.75;
+      margin-bottom: 133px;
+      margin-top: 0;
+    }
+    .welcomeLink {
+      font-size: $textMainSize * 0.58333333;
+    }
+  }
 }

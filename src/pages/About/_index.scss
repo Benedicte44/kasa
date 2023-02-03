@@ -1,13 +1,19 @@
 // The style for about page component
 
-.main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
 .aboutSection {
   display: flex;
   flex-direction: column;
   row-gap: 31px;
   margin: 31px 109px 100px 108px;
+}
+
+/* // The style for mobile phone screen */
+@media only screen and (max-width: 767px) {
+  .aboutSection {
+    row-gap: 20px;
+    margin: 19px 0px 100px 0px;
+  }
+  .aboutBanner {
+    height: 223px;
+  }
 }

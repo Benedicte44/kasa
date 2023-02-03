@@ -4,9 +4,6 @@ $textImgColor: white;
 $containerBg: #f7f7f7;
 $textMainSize: 24px;
 
-.collapse {
-  width: 100%;
-}
 .collapseHeader {
   background-color: $textMainColor;
   display: flex;
@@ -25,11 +22,27 @@ $textMainSize: 24px;
 }
 
 .collapseDescription {
-  display: flex;
   background-color: $containerBg;
   padding: 36px 27px 19px 18px;
   border-radius: 5px;
   margin-top: -9px;
   z-index: 1;
   color: $textMainColor;
+}
+
+/* // The style for mobile phone screen */
+@media only screen and (max-width: 767px) {
+  .collapseHeader {
+    h1 {
+      font-size: $textMainSize * 0.54166666;
+    }
+    .arrow {
+      width: 64%;
+    }
+  }
+  .collapseDescription {
+    font-size: $textMainSize * 0.5;
+    padding: 23.08px 6.91px 52.58px 11.51px;
+    margin-top: -4px;
+  }
 }

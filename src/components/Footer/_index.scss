@@ -15,9 +15,12 @@ footer {
   color: $textColor;
   position: relative;
   bottom: 0px;
-
   .footer__logo {
     margin-top: 31%;
+  }
+  p {
+    display: inline-block;
+    text-align: center;
   }
 }
 
@@ -25,5 +28,8 @@ footer {
 @media only screen and (max-width: 767px) {
   footer {
     margin: 20px -20px 0px -20px;
+    p {
+      font-size: $textSize * 0.5;
+    }
   }
 }

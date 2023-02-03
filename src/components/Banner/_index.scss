@@ -34,8 +34,11 @@ $textMainSize: 24px;
 
 /* // The style for mobile phone screen */
 @media only screen and (max-width: 767px) {
-  .banner {
+  .homepage .banner {
     height: 111px;
+  }
+  .aboutPage .bannerImg {
+    object-fit: initial;
   }
   .bannerText {
     justify-content: left;

@@ -1,0 +1,35 @@
+// The style for collapse component
+$textMainColor: #ff6060;
+$textImgColor: white;
+$containerBg: #f7f7f7;
+$textMainSize: 24px;
+
+.collapse {
+  width: 100%;
+}
+.collapseHeader {
+  background-color: $textMainColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 47px;
+  border-radius: 5px;
+  padding: 0 16.86px 0 18px;
+  z-index: 2;
+  position: relative;
+  h1 {
+    font-weight: normal;
+    color: $textImgColor;
+    font-size: $textMainSize;
+  }
+}
+
+.collapseDescription {
+  display: flex;
+  background-color: $containerBg;
+  padding: 36px 27px 19px 18px;
+  border-radius: 5px;
+  margin-top: -9px;
+  z-index: 1;
+  color: $textMainColor;
+}

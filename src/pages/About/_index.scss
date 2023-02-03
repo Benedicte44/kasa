@@ -1,0 +1,13 @@
+// The style for about page component
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 31px;
+  margin: 31px 109px 100px 108px;
+}

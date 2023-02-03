@@ -7,7 +7,6 @@ import Header from '.././components/Header'
 import Footer from '.././components/Footer'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-// import aboutData from './data/about.json'
 
 function router() {
   return (
@@ -16,13 +15,7 @@ function router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/accomodation/:id" element={<AccomodationDetails />} />
-        <Route
-          path="/about"
-          element={
-            <About //data={aboutData}
-            />
-          }
-        />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

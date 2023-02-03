@@ -10,7 +10,6 @@ function Header() {
       <Link to="/">
         <img src={logo} alt="Logo Kasa Red" className="header__logo" />
       </Link>
-      {/* Main menu */}
       <nav>
         <NavLink
           className={({ isActive }) =>

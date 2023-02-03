@@ -5,9 +5,7 @@ function Banner({ image, text }) {
   return (
     <div className="banner">
       <img src={image} alt="Banner of Kasa" className="bannerImg" />
-      <div className="bannerText">
-        <h1>{text}</h1>
-      </div>
+      <div className="bannerText">{text ? <h1>{text}</h1> : null}</div>
     </div>
   )
 }

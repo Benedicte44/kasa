@@ -1,0 +1,29 @@
+/* The style for the footer component */
+
+$textColor: white;
+$textSize: 24px;
+$backgroundColor: black;
+
+footer {
+  background-color: $backgroundColor;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px -100px 0px -100px;
+  color: $textColor;
+  position: relative;
+  bottom: 0px;
+
+  .footer__logo {
+    margin-top: 31%;
+  }
+}
+
+/* // The style for mobile phone screen */
+@media only screen and (max-width: 767px) {
+  footer {
+    margin: 20px -20px 0px -20px;
+  }
+}

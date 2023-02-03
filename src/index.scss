@@ -1,0 +1,26 @@
+/* Here we define the global app style */
+
+$textMainColor: #ff6060;
+$textMainSize: 18px;
+
+body {
+  margin: auto;
+  padding: 40px 100px 0px 100px;
+  font-family: 'Montserrat';
+  color: $textMainColor;
+  font-size: $textMainSize;
+}
+
+// /* // The style for mobile phone screen */
+// @media only screen and (max-width: 767px) {
+//   body {
+//     margin: 20px 20px 0px 20px;
+//   }
+// }
+
+/* // The style for tablets and phone */
+@media only screen and (max-width: 1024px) {
+  body {
+    padding: 20px 20px 0px 20px;
+  }
+}

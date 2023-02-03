@@ -1,0 +1,62 @@
+/* The style for the banner component */
+$textImgColor: white;
+$textMainSize: 24px;
+
+.banner {
+  position: relative;
+  height: 223px;
+  width: 100%;
+}
+
+.bannerImg {
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+}
+
+.bannerText {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  h1 {
+    font-weight: normal;
+    color: $textImgColor;
+    font-size: $textMainSize * 2;
+  }
+}
+
+/* // The style for mobile phone screen */
+@media only screen and (max-width: 767px) {
+  .banner {
+    height: 111px;
+  }
+  .bannerText {
+    justify-content: left;
+    h1 {
+      font-size: $textMainSize;
+      margin: 0 16px 0 16px;
+    }
+  }
+  .bannerImg {
+    border-radius: 10px;
+  }
+}
+
+/* // The style for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .bannerText {
+    h1 {
+      font-size: $textMainSize * 1.5;
+    }
+  }
+  .bannerImg {
+    border-radius: 10px;
+  }
+}

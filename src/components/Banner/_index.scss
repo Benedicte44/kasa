@@ -1,11 +1,10 @@
-/* The style for the banner component */
+// The style for the banner component
 $textImgColor: white;
 $textMainSize: 24px;
 
 .banner {
   position: relative;
   height: 223px;
-  width: 100%;
 }
 
 .bannerImg {
@@ -32,7 +31,7 @@ $textMainSize: 24px;
   }
 }
 
-/* // The style for mobile phone screen */
+// The style for mobile phone screen
 @media only screen and (max-width: 767px) {
   .homepage .banner {
     height: 111px;
@@ -52,7 +51,7 @@ $textMainSize: 24px;
   }
 }
 
-/* // The style for tablets */
+// The style for tablets
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .bannerText {
     h1 {

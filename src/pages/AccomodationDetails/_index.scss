@@ -34,9 +34,15 @@ $textMainSize: 24px;
         min-height: 25px;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
+        margin: 20px 0 0 0;
         padding: 0 10px;
       }
+    }
+    .rentingInfoSupp {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
     }
     .rentingOwner {
       display: flex;
@@ -53,7 +59,6 @@ $textMainSize: 24px;
       }
     }
   }
-
   .collapseDescription {
     font-size: $textMainSize * 0.75;
   }
@@ -65,16 +70,23 @@ $textMainSize: 24px;
 .details {
   display: flex;
   column-gap: 76px;
+  line-height: 142.6%;
   .collapse {
     flex: 1;
   }
+  .equipement__detail {
+    margin: 0;
+  }
 }
 
-/* // The style for mobile phone screen */
+/*  The style for mobile phone screen */
 @media only screen and (max-width: 767px) {
   .descriptif {
     margin-top: 15px;
     .resume {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
       h1 {
         font-size: $textMainSize * 0.75;
       }
@@ -86,15 +98,25 @@ $textMainSize: 24px;
         .tags {
           border-radius: 5px;
           font-size: $textMainSize * 0.416666666;
-          width: 84px;
+          min-width: 0px;
+          max-width: 84px;
           min-height: 18px;
-          margin-top: 10px;
+          margin: 10px 0 0 0;
+          padding: 2px 5px;
         }
+      }
+      .rentingInfoSupp {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        margin-top: 16px;
       }
       .rentingOwner {
         column-gap: 10.5px;
+        align-items: flex-end;
         p {
           font-size: $textMainSize * 0.5;
+          margin: 0;
         }
         .ownerFace {
           border-radius: 16px;
@@ -105,6 +127,7 @@ $textMainSize: 24px;
     }
     .collapseDescription {
       font-size: $textMainSize * 0.5;
+      padding: 23.02px 6.91px 1.3px 11.51px;
     }
     h2 {
       font-size: $textMainSize * 0.54;
@@ -113,5 +136,6 @@ $textMainSize: 24px;
   .details {
     flex-direction: column;
     row-gap: 20.07px;
+    line-height: 17.11px;
   }
 }

@@ -7,6 +7,7 @@ import './_index.scss'
 function Header() {
   return (
     <header>
+      {console.log(logo)}
       <Link to="/">
         <img src={logo} alt="Logo Kasa Red" className="header__logo" />
       </Link>

@@ -1,0 +1,21 @@
+// The style for my rating component
+
+.rating__stars {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  column-gap: 10px;
+}
+
+/* // The style for mobile phone screen */
+@media only screen and (max-width: 767px) {
+  .rating__stars {
+    column-gap: 5px;
+    p {
+      display: flex;
+      height: 15px;
+      width: 15px;
+      margin: 0;
+    }
+  }
+}

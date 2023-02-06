@@ -2,7 +2,7 @@
 $textMainSize: 24px;
 html {
   height: 100%;
-  position: relative;
+
   margin: 0;
 }
 body {
@@ -10,10 +10,18 @@ body {
   padding: 40px 100px 0px 100px;
   font-family: 'Montserrat';
   font-size: $textMainSize;
+  display: flex;
   flex-direction: column;
+  height: 100%;
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
 }
 
-/* // The style for tablets and phone */
+/* The style for tablets and phone */
 @media only screen and (max-width: 1024px) {
   body {
     padding: 20px 20px 0px 20px;

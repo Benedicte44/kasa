@@ -17,8 +17,10 @@ function AccomodationDetails() {
             <h1>{targetedRenting.title}</h1>
             <p className="locationRenting">{targetedRenting.location}</p>
             <div className="tagsContainer">
-              {targetedRenting.tags.map((tag) => (
-                <li className="tags">{tag}</li>
+              {targetedRenting.tags.map((tag, index) => (
+                <li className="tags" key={index}>
+                  {tag}
+                </li>
               ))}
             </div>
           </div>
@@ -38,11 +40,12 @@ function AccomodationDetails() {
             title="Description"
             description={targetedRenting.description}
             className="detailsDesc"
+            key={'Description' + targetedRenting.id}
           />
           <Collapse
             title="Equipements"
-            description={targetedRenting.equipments.map((equipement) => (
-              <p>{equipement}</p>
+            description={targetedRenting.equipments.map((equipement, index) => (
+              <p key={index}>{equipement}</p>
             ))}
             className="detailsEqu"
           />

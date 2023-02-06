@@ -1,0 +1,117 @@
+// The style for the product page component
+$textMainColor: #ff6060;
+$textImgColor: white;
+$containerBg: #f7f7f7;
+$textMainSize: 24px;
+
+.descriptif {
+  margin-top: 30px;
+  color: $textMainColor;
+  .resume {
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-weight: normal;
+      font-size: $textMainSize * 1.5;
+      margin: 0;
+    }
+    .locationRenting {
+      font-size: $textMainSize * 0.75;
+      margin: 0;
+    }
+    .tagsContainer {
+      display: flex;
+      column-gap: 10px;
+      .tags {
+        display: flex;
+        list-style-type: none;
+        background-color: $textMainColor;
+        color: $textImgColor;
+        border-radius: 10px;
+        font-size: $textMainSize * 0.58;
+        min-width: 115px;
+        min-height: 25px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 0 10px;
+      }
+    }
+    .rentingOwner {
+      display: flex;
+      column-gap: 10px;
+      p {
+        width: min-content;
+        text-align: right;
+        font-size: $textMainSize * 0.75;
+      }
+      .ownerFace {
+        border-radius: 32px;
+        height: 64px;
+        width: 64px;
+      }
+    }
+  }
+
+  .collapseDescription {
+    font-size: $textMainSize * 0.75;
+  }
+  h2 {
+    font-size: $textMainSize * 0.75;
+  }
+}
+
+.details {
+  display: flex;
+  column-gap: 76px;
+  .collapse {
+    flex: 1;
+  }
+}
+
+/* // The style for mobile phone screen */
+@media only screen and (max-width: 767px) {
+  .descriptif {
+    margin-top: 15px;
+    .resume {
+      h1 {
+        font-size: $textMainSize * 0.75;
+      }
+      .locationRenting {
+        font-size: $textMainSize * 0.583;
+        margin-top: 5px;
+      }
+      .tagsContainer {
+        .tags {
+          border-radius: 5px;
+          font-size: $textMainSize * 0.416666666;
+          width: 84px;
+          min-height: 18px;
+          margin-top: 10px;
+        }
+      }
+      .rentingOwner {
+        column-gap: 10.5px;
+        p {
+          font-size: $textMainSize * 0.5;
+        }
+        .ownerFace {
+          border-radius: 16px;
+          height: 32px;
+          width: 32px;
+        }
+      }
+    }
+    .collapseDescription {
+      font-size: $textMainSize * 0.5;
+    }
+    h2 {
+      font-size: $textMainSize * 0.54;
+    }
+  }
+  .details {
+    flex-direction: column;
+    row-gap: 20.07px;
+  }
+}

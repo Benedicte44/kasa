@@ -14,7 +14,7 @@ function About() {
           <Collapse
             title={item.title}
             description={item.description}
-            id={item.id}
+            key={item.id}
           />
         ))}
       </div>

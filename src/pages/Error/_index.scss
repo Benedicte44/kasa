@@ -1,24 +1,23 @@
-// The style for error page component
+/*The ErrorPage's style*/
 
-$textMainColor: #ff6060;
-$textImgColor: white;
-$containerBg: #f7f7f7;
-$textMainSize: 24px;
-
-.errorPage {
+.error-page {
+  // The  style for the global container of the error page
   display: flex;
   flex-direction: column;
   text-align: center;
   color: $textMainColor;
   h1 {
+    // The  style for the 404 text
     font-size: $textMainSize * 12;
     margin: 169px 0px 66px 0;
   }
   p {
+    // The style of the text "oups...."
     font-size: $textMainSize * 1.5;
     margin-bottom: 182px;
   }
-  .welcomeLink {
+  &__welcome-link {
+    // The  style for the link to the home page
     color: $textMainColor;
     font-size: $textMainSize * 0.75;
     margin-bottom: 150px;
@@ -26,19 +25,23 @@ $textMainSize: 24px;
 }
 
 /* // The style for mobile phone screen */
-@media only screen and (max-width: 767px) {
-  .errorPage {
+@media #{$BREAKPOINT-MOBILE} {
+  .error-page {
+    // The  style for the global container of the error page
     h1 {
+      // The  style for the 404 text
       font-size: $textMainSize * 4;
       margin-top: 195px;
       margin-bottom: 11px;
     }
     p {
+      // The style of the text "oups...."
       font-size: $textMainSize * 0.75;
       margin-bottom: 133px;
       margin-top: 0;
     }
-    .welcomeLink {
+    &__welcome-link {
+      // The  style for the link to the home page
       font-size: $textMainSize * 0.58333333;
     }
   }

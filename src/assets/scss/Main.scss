@@ -1,0 +1,19 @@
+/* Importation of all app's style files */
+
+//general conf and vars
+@import './_conf';
+@import './global';
+
+//components
+@import '../../components/Banner/_index.scss';
+@import '../../components/Cards/_index.scss';
+@import '../../components/Collapse/_index.scss';
+@import '../../components/Footer/_index.scss';
+@import '../../components/Header/_index.scss';
+@import '../../components/Rate/_index.scss';
+@import '../../components/SlideShow/_index.scss';
+
+//pages
+@import '../../pages/About/_index.scss';
+@import '../../pages/AccomodationDetails/_index.scss';
+@import '../../pages/Error/_index.scss';

@@ -1,52 +1,59 @@
-// The style for collapse component
-$textMainColor: #ff6060;
-$textImgColor: white;
-$containerBg: #f7f7f7;
-$textMainSize: 24px;
+/* Collapse component's style */
 
-.collapseHeader {
-  background-color: $textMainColor;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 47px;
-  border-radius: 5px;
-  padding: 0 16.86px 0 18px;
-  z-index: 2;
-  position: relative;
-  h2 {
-    font-weight: normal;
-    color: $textImgColor;
-    font-size: $textMainSize;
+.collapse {
+  &__header {
+    // Style for the collapse section dedicated to the title
+    background-color: $textMainColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+    border-radius: 5px;
+    padding: 0 16.86px 0 18px;
+    z-index: 2;
+    position: relative;
+    h2 {
+      // Style for the collapse title
+      font-weight: normal;
+      color: $textImgColor;
+      font-size: $textMainSize;
+    }
+  }
+  &__description {
+    // Style for the collapse description section
+    background-color: $containerBg;
+    padding: 36px 27px 19px 18px;
+    border-radius: 5px;
+    margin-top: -9px;
+    color: $textMainColor;
   }
 }
 
-.collapseDescription {
-  background-color: $containerBg;
-  padding: 36px 27px 19px 18px;
-  border-radius: 5px;
-  margin-top: -9px;
-  color: $textMainColor;
-}
-
-/* // The style for mobile phone screen */
-@media only screen and (max-width: 767px) {
-  .collapseHeader {
-    height: 30px;
-    padding: 0 11.51px 0 6.79px;
-    h2 {
-      font-size: $textMainSize * 0.54166666;
+// The style for mobile phone screen
+@media #{$BREAKPOINT-MOBILE} {
+  .collapse {
+    &__header {
+      // Style for the collapse section dedicated to the title
+      height: 30px;
+      padding: 0 11.51px 0 6.79px;
+      h2 {
+        // Style for the collapse title
+        font-size: $textMainSize * 0.54166666;
+      }
+      span {
+        // Style for the span that contains the arrow of the header section
+        display: flex;
+      }
     }
-    span {
-      display: flex;
-    }
-    .arrow {
+    &__arrow {
+      // Style for the arrows of the header collapse section
       width: 64%;
     }
-  }
-  .collapseDescription {
-    font-size: $textMainSize * 0.5;
-    padding: 23.08px 6.91px 52.58px 11.51px;
-    margin-top: -4px;
+    &__description {
+      // Style for the collapse description section
+      font-size: $textMainSize * 0.5;
+      padding: 23.08px 6.91px 52.58px 11.51px;
+      margin-top: -4px;
+    }
   }
 }

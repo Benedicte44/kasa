@@ -1,8 +1,9 @@
-// Our home page component
-import Banner from '../../components/Banner'
-import bannerImage from '../../assets/landscape-kasa-welcome.png'
-import CardsLayout from '../../components/Cards'
-import { accomodationsList } from '../../datas/accomodationList'
+/* Home page component
+ * It returns a banner and cards with our products main info*/
+import Banner from '../../components/Banner' // the Banner component to display a welcome picture and a slogan
+import CardsLayout from '../../components/Cards' // The CardsLayout component to display a resume on each renting available in our data list
+import bannerImage from '../../assets/images/landscape-kasa-welcome.png' // the picture used in the banner
+import { accomodationsList } from '../../datas/accomodationList' // the datas on our rentings
 
 function Home() {
   const image = bannerImage

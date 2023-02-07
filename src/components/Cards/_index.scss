@@ -1,12 +1,8 @@
-// The style for the cards component
+/* Cards component's style */
 
-$textImgColor: white;
-$textMainSize: 24px;
-$containerBg: #f7f7f7;
-
-.cardsContainer {
+.cards-container {
+  //style for the section that wrap all the cards created
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   row-gap: 50px;
@@ -15,57 +11,62 @@ $containerBg: #f7f7f7;
   padding: 56px 20px 56px 20px;
   margin-top: 43px;
   border-radius: 25px;
-}
-.card {
-  display: flex;
-  height: 340px;
-  width: 340px;
-  position: relative;
-  &__img {
+  &__card {
+    // style for a unique card
+    height: 340px;
+    width: 340px;
+    position: relative;
+    h2 {
+      // style for the card title
+      position: absolute;
+      bottom: 0;
+      margin: 0 20px 20px 20px;
+      color: $textImgColor;
+      font-size: $textMainSize * 0.75;
+      font-weight: normal;
+    }
+  }
+  &__card-img {
+    // style for he card image
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    -webkit-filter: brightness(70%);
-    filter: brightness(70%);
-  }
-  h2 {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    margin: 0 20px 20px 20px;
-    color: $textImgColor;
-    font-size: $textMainSize * 0.75;
-    font-weight: normal;
+    -webkit-filter: brightness(
+      70%
+    ); // we put a filter on the card image to darken it
+    filter: brightness(70%); // we put a filter on the card image to darken it
   }
 }
 
 /* // The style for mobile phone screen */
-@media only screen and (max-width: 767px) {
-  .cardsContainer {
-    justify-content: center;
+@media #{$BREAKPOINT-MOBILE} {
+  .cards-container {
+    //style for the section that wrap all the cards created
     background-color: transparent;
     padding: 0px 0px 0px 0px;
     margin-top: 22px;
     row-gap: 20px;
-    column-gap: 10px;
-  }
-  .card {
-    height: 255px;
+    &__card {
+      // style for a unique card
+      height: 255px;
+    }
   }
 }
 
 /* // The style for tablets */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .cardsContainer {
+@media #{$BREAKPOINT-TABLET} {
+  .cards-container {
+    //style for the section that wrap all the cards created
     justify-content: space-between;
     background-color: transparent;
     padding: 0px 0px 0px 0px;
     margin-top: 22px;
     row-gap: 20px;
     column-gap: 10px;
-  }
-  .card {
-    height: 255px;
+    &__card {
+      // style for a unique card
+      height: 255px;
+    }
   }
 }

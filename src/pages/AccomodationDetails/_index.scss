@@ -1,29 +1,31 @@
-// The style for the product page component
-$textMainColor: #ff6060;
-$textImgColor: white;
-$containerBg: #f7f7f7;
-$textMainSize: 24px;
+/* Product page component's style */
 
 .descriptif {
+  // The style for the details section of the product page
   margin-top: 30px;
   color: $textMainColor;
-  .resume {
-    margin-bottom: 26px;
+  &__resume {
+    // the style for the container of the global datas on the renting (title, location, owner, ....)
+    margin: 0 0 26px 0;
     display: flex;
     justify-content: space-between;
     h1 {
+      // The style for the title of the renting
       font-weight: normal;
       font-size: $textMainSize * 1.5;
       margin: 0;
     }
-    .locationRenting {
+    &__location {
+      // The style for the renting locations
       font-size: $textMainSize * 0.75;
       margin: 0;
     }
-    .tagsContainer {
+    &__tags-container {
+      // the style for the container enumerating the rentings'tags
       display: flex;
       column-gap: 10px;
-      .tags {
+      &__tags {
+        // The style for the unic tag
         display: flex;
         list-style-type: none;
         background-color: $textMainColor;
@@ -38,64 +40,72 @@ $textMainSize: 24px;
         padding: 0 10px;
       }
     }
-    .rentingInfoSupp {
+    &__info-supp {
+      // The style for the section dedicated to the owner and the rating of the renting
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-end;
     }
-    .rentingOwner {
+    &__info-supp-owner {
+      // The style for the section containing the owners's details
       display: flex;
       column-gap: 10px;
       p {
+        // the style for the owner's name
         width: min-content;
         text-align: right;
         font-size: $textMainSize * 0.75;
       }
-      .ownerFace {
-        border-radius: 32px;
-        height: 64px;
-        width: 64px;
-      }
+    }
+    &__info-supp-owner-face {
+      // the style for the owner's face picture
+      border-radius: 32px;
+      height: 64px;
+      width: 64px;
     }
   }
-  .collapseDescription {
-    font-size: $textMainSize * 0.75;
-  }
-  h2 {
-    font-size: $textMainSize * 0.75;
-  }
-}
-
-.details {
-  display: flex;
-  column-gap: 76px;
-  line-height: 142.6%;
-  .collapse {
-    flex: 1;
-  }
-  .equipement__detail {
-    margin: 0;
+  &__details {
+    // The style for the section dedicated to a more detailed description with data on the renting and equipements
+    display: flex;
+    column-gap: 76px;
+    .collapse {
+      // The style for the container of the collapses
+      flex: 1;
+    }
+    .collapse__description {
+      // The style for the description contained in the different collapses of the product page
+      font-size: $textMainSize * 0.75;
+    }
+    h2 {
+      // The style for the titles of collapses displayed in the product page component
+      font-size: $textMainSize * 0.75;
+    }
   }
 }
 
 /*  The style for mobile phone screen */
-@media only screen and (max-width: 767px) {
+@media #{$BREAKPOINT-MOBILE} {
   .descriptif {
+    // The style for the details section of the product page
     margin-top: 15px;
-    .resume {
+    &__resume {
+      // the style for the container of the global datas on the renting (title, location, owner, ....)
       margin-bottom: 16px;
       display: flex;
       flex-direction: column;
       h1 {
+        // The style for the title of the renting
         font-size: $textMainSize * 0.75;
       }
-      .locationRenting {
+      &__location {
+        // The style for the renting locations
         font-size: $textMainSize * 0.583;
         margin-top: 5px;
       }
-      .tagsContainer {
-        .tags {
+      &__tags-container {
+        &__tags {
+          // The style for the unic tag
           border-radius: 5px;
           font-size: $textMainSize * 0.416666666;
           min-width: 0px;
@@ -105,37 +115,43 @@ $textMainSize: 24px;
           padding: 2px 5px;
         }
       }
-      .rentingInfoSupp {
+      &__info-supp {
+        // The style for the section dedicated to the owner and the rating of the renting
         display: flex;
         flex-direction: row-reverse;
-        align-items: flex-end;
+        align-items: center;
         margin-top: 16px;
       }
-      .rentingOwner {
+      &__info-supp-owner {
+        // The style for the section containing the owners's details
         column-gap: 10.5px;
         align-items: flex-end;
         p {
+          // the style for the owner's name
           font-size: $textMainSize * 0.5;
           margin: 0;
         }
-        .ownerFace {
-          border-radius: 16px;
-          height: 32px;
-          width: 32px;
-        }
+      }
+      &__info-supp-owner-face {
+        // the style for the owner's face picture
+        border-radius: 16px;
+        height: 32px;
+        width: 32px;
       }
     }
-    .collapseDescription {
-      font-size: $textMainSize * 0.5;
-      padding: 23.02px 6.91px 1.3px 11.51px;
+    &__details {
+      // The style for the section dedicated to a more detailed description with data on the renting and equipements
+      flex-direction: column;
+      row-gap: 20.07px;
+      .collapse__description {
+        // The style for the description contained in the different collapses of the product page
+        font-size: $textMainSize * 0.5;
+        padding: 23.02px 6.91px 1.3px 11.51px;
+      }
+      h2 {
+        // The style for the titles of collapses displayed in the product page component
+        font-size: $textMainSize * 0.54;
+      }
     }
-    h2 {
-      font-size: $textMainSize * 0.54;
-    }
-  }
-  .details {
-    flex-direction: column;
-    row-gap: 20.07px;
-    line-height: 17.11px;
   }
 }

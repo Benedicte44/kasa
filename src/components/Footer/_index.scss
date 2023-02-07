@@ -1,10 +1,7 @@
-// The style for the footer component
-
-$textColor: white;
-$textSize: 24px;
-$backgroundColor: black;
+/* Footer component's style */
 
 footer {
+  // the style for the footer container
   background-color: $backgroundColor;
   min-height: 209px;
   display: flex;
@@ -12,23 +9,26 @@ footer {
   align-items: center;
   justify-content: center;
   margin: 30px -100px 0px -100px;
-  color: $textColor;
-
-  .footer__logo {
+  color: $textImgColor;
+  &__logo {
+    // the style for the footer's logo
     margin-top: 31%;
   }
   p {
+    // the style for the footer's mentions
     display: inline-block;
     text-align: center;
   }
 }
 
 /* The style for tablets and phone */
-@media only screen and (max-width: 1024px) {
+@media #{$BREAKPOINT-TABLET-AND-MOBILE} {
   footer {
+    // the style for the footer container
     margin: 20px -20px 0px -20px;
     p {
-      font-size: $textSize * 0.5;
+      // the style for the footer's mentions
+      font-size: $textMainSize * 0.5;
     }
   }
 }

@@ -1,0 +1,16 @@
+/* The colors of the graphical charter and the breakpoints
+
+/*|---------------|App Color Schema|---------------*/
+$textMainColor: #ff6060;
+$textImgColor: white;
+$containerBg: #f7f7f7;
+$textMainSize: 24px;
+$backgroundColor: black;
+
+/*|---------------|BREAKPOINTS|---------------*/
+
+// Usage example:  @media #{$BREAKPOINT-TABLET}
+
+$BREAKPOINT-TABLET: 'only screen and (min-width: 768px) and (max-width: 1024px)';
+$BREAKPOINT-MOBILE: 'only screen and (max-width: 767px)';
+$BREAKPOINT-TABLET-AND-MOBILE: 'only screen and (max-width: 1024px)';

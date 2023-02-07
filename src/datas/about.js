@@ -1,3 +1,4 @@
+// datas about our values, used in the about components
 export const about = [
   {
     id: '1',

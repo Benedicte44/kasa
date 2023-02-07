@@ -1,29 +1,25 @@
-// The style for slideshow component
-$textImgColor: white;
-$textMainSize: 24px;
+/* Slideshow component's style */
 
 .slideshow {
-  width: 100%;
+  // The style for the global slideshow container
   position: relative;
   display: flex;
   height: 415px;
-  .slideshowPic {
+  &__pic {
+    // The style for the slideshow's images
     width: 100%;
-    height: 100%;
-    z-index: 1;
     object-fit: cover;
     border-radius: 25px;
   }
-  .imgConditioned {
-    align-items: center;
-    justify-content: space-between;
+  &__img-conditioned {
+    // The style for the slideshow's container for arrows and count elements
     display: flex;
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: 2;
   }
-  .arrow {
+  &__arrow {
+    // The style for the slideshow's arrows' container
     align-items: center;
     justify-content: space-between;
     display: flex;
@@ -32,7 +28,8 @@ $textMainSize: 24px;
       padding: 0 23.36px 0 23.36px;
     }
   }
-  .picturesDiag {
+  &__count {
+    // The style for the slideshow's image count
     justify-content: center;
     display: flex;
     width: 100%;
@@ -44,12 +41,14 @@ $textMainSize: 24px;
 }
 
 // The style for mobile phone screen
-@media only screen and (max-width: 767px) {
+@media #{$BREAKPOINT-MOBILE} {
   .slideshow {
+    // The style for the global slideshow container
+    position: relative;
     height: 255px;
-    .arrow {
+    &__arrow {
+      // The style for the slideshow's arrows' container
       img {
-        height: 25%;
         width: 25%;
       }
       span {

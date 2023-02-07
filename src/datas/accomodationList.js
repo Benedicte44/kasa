@@ -1,3 +1,5 @@
+// datas about rentings, used in the home and accomodation detail components
+
 export const accomodationsList = [
   {
     id: 'c67ab8a7',

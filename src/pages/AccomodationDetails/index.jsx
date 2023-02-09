@@ -1,19 +1,20 @@
 /* Detailed product page component
  * It returns a slideshow showing the renting pictures, and details on the renting such as the name, owner, renting, equipments...*/
-import { useParams } from 'react-router-dom' // We get the hook useparams to take the product id sent in the url
+import { useParams, Navigate } from 'react-router-dom' // We get the hook useparams to take the product id sent in the url, and the hook useNavigate to be redirected to the error page when the id is not correct
 import Slideshow from '../../components/SlideShow' // The slideshow component to navigate on the product's pictures
 import Collapse from '../../components/Collapse' // The Collapse component to let the user chose if he wants to see or not the product's details
 import Rate from '../../components/Rate' // The Rate commponent to reveals the stars allocated to the product
-import ErrorPage from '../Error' // The ErrorPage component if the id of the product doesn't exist
 import { accomodationsList } from '../../datas/accomodationList' // the datas product file
 
 function AccomodationDetails() {
   const { id } = useParams() // We get the id of the product in the page url
   const targetedRenting = accomodationsList.find((renting) => renting.id === id) // We select in our datas file the product matching with the id contained in the url
+
   if (!targetedRenting) {
     // if the product doesn't exist the error page component is returned
-    return <ErrorPage />
+    return <Navigate to="*" />
   }
+
   return (
     <main>
       <Slideshow pictures={targetedRenting.pictures} />

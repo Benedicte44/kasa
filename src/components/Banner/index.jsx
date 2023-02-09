@@ -1,5 +1,6 @@
 /* The banner component that returns an image and a title h1 (if it exists) in the dom
  *To use this component we have to provide the image and text props*/
+import PropTypes from 'prop-types'
 
 function Banner({ image, text }) {
   return (
@@ -9,5 +10,9 @@ function Banner({ image, text }) {
     </div>
   )
 }
+
+Banner.propTypes = {
+  image: PropTypes.string,
+} // The props image is required for the banner
 
 export default Banner

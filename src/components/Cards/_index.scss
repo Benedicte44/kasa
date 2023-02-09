@@ -32,9 +32,6 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    -webkit-filter: brightness(
-      70%
-    ); // we put a filter on the card image to darken it
     filter: brightness(70%); // we put a filter on the card image to darken it
   }
 }

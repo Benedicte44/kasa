@@ -19,6 +19,9 @@
       font-size: $textMainSize;
     }
   }
+  &__arrow {
+    cursor: pointer;
+  }
   &__description {
     // Style for the collapse description section
     background-color: $containerBg;

@@ -12,7 +12,7 @@ function AccomodationDetails() {
 
   if (!targetedRenting) {
     // if the product doesn't exist the error page component is returned
-    return <Navigate to="*" />
+    return <Navigate to="/404" />
   }
 
   return (

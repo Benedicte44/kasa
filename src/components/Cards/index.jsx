@@ -15,14 +15,17 @@ function CardsLayout({ dataList }) {
             // The id of the objectTargeted is put in the element to have a unic key value
             <div className="cards-container__card" key={id}>
               {/* Creation of a Link in the dom that wraps the card's elements, its url takes the id data of the objectTargeted */}
-              <Link to={'/accomodation/' + id}>
+              <Link
+                to={'/accomodation/' + id}
+                className="cards-container__card-link"
+              >
                 <img
                   className="cards-container__card-img"
                   src={cover}
                   alt={tags}
                 />
-                <h2>{title}</h2>
               </Link>
+              <h2>{title}</h2>
             </div>
           )
         }

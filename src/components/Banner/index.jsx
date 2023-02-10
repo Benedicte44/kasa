@@ -12,7 +12,7 @@ function Banner({ image, text }) {
 }
 
 Banner.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.string.isRequired,
 } // The props image is required for the banner
 
 export default Banner

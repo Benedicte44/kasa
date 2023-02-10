@@ -1,7 +1,7 @@
 /* Cards display component used in the home page
  * It returns a section with as much as cards needed to expose each object of the data array, in the dom
  * To use this component we have to provide a datalist props*/
-
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom' // The Link component of react
 
 function CardsLayout({ dataList }) {
@@ -34,4 +34,7 @@ function CardsLayout({ dataList }) {
   )
 }
 
+CardsLayout.propTypes = {
+  dataList: PropTypes.array.isRequired,
+} // The props dataList as an array is required for the cardsLayout
 export default CardsLayout

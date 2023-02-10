@@ -1,7 +1,7 @@
 /* Collapse component used in the about and accomodationDetails components
  * It returns a container with a header part and a description
  * To use this component we have to provide the title, description props*/
-
+import PropTypes from 'prop-types'
 import { useState } from 'react' // the hook usestate of react is imported
 import arrowToOpen from '../../assets/images/arrow-to-open.svg' // the arrow used when the collapse is closed
 import arrowOpened from '../../assets/images/arrow-opened.svg' // the arrow used when the collapse is opened
@@ -40,5 +40,9 @@ function Collapse({ title, description }) {
     </div>
   )
 }
+
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+} // The props image is required for the banner
 
 export default Collapse

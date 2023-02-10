@@ -1,5 +1,6 @@
 /* Slideshow component
  * It returns a container that reveals one picture of the product, the user can then navigate to the previous or next picture if there are more than one picture*/
+import PropTypes from 'prop-types'
 import { useState } from 'react' // The react component usestate to get the state of a variable
 import arrowBack from '../../assets/images/arrow-back.svg' // The arrowback image to navigate to the previous image
 import arrowNext from '../../assets/images/arrow-next.svg' // The arrowNext image to navigate to the next image
@@ -43,9 +44,8 @@ function Slideshow({ pictures }) {
     </div>
   )
 }
+Slideshow.propTypes = {
+  pictures: PropTypes.array.isRequired,
+} // The props pictures is required for the Slideshow component
 
 export default Slideshow
-
-// {pictures.map((picture) => {
-//     return <img src={picture} alt="logement" />
-//   })}

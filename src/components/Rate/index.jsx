@@ -1,7 +1,7 @@
 /* Rating commponent used in the accomodation details component
  * It returns a container with 5 stars colored in red or grey according to the rating of the product contained in the datas array on products
  * To use this component we have to provide the rating props */
-
+import PropTypes from 'prop-types'
 import stargrey from '../../assets/images/stargrey.png' // the image for grey star meaning the point is not given
 import starred from '../../assets/images/starred.svg' // the image for red star meaning the point is given
 
@@ -25,5 +25,9 @@ function Rate({ ratings }) {
     </div>
   )
 }
+
+Rate.propTypes = {
+  ratings: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+} // The props ratings is required for the Rate component
 
 export default Rate

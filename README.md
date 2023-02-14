@@ -68,4 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # kasa
+
+Kasa is a real estate add app, wainting for its backend building.
+
+The files used to build the app is architectured following this logic :
+ - "public" folder : the html file => the app template
+ - "src" folder : 
+        --> the "index.js" file at the root = the global set up of the app
+        --> "routes" contains the file for the routing building og the app
+        --> "assets" contains the pictures of the app, and the global style files
+        --> "components" folder contains folders for each little components of the app with 2 files each (one for the setting up, and one for the style of the component)
+        --> "datas" contains 2 datas files used in the app
+        --> "pages" contains folders for each global pages components of the app
+

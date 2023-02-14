@@ -6,11 +6,11 @@ The files used to build the app is architectured following this logic :
  - "public" folder : the html file => the app template
  - "src" folder : 
        the "index.js" file at the root = the global set up of the app
-       "routes" contains the file for the routing building og the app
-        - "assets" contains the pictures of the app, and the global style files
-        - "components" folder contains folders for each little components of the app with 2 files each (one for the setting up, and one for the style of the component)
-        - "datas" contains 2 datas files used in the app
-        - "pages" contains folders for each global pages components of the app
+        __//__ "routes" contains the file for the routing building og the app
+        __//__ "assets" contains the pictures of the app, and the global style files
+        __//__ "components" folder contains folders for each little components of the app with 2 files each (one for the setting up, and one for the style of the component)
+        __//__ "datas" contains 2 datas files used in the app
+        __//__ "pages" contains folders for each global pages components of the app
         
 
 # Getting Started with Create React App

@@ -1,3 +1,18 @@
+# kasa
+
+Kasa is a real estate add React app, waiting for its backend building.
+
+The files used to build the app is architectured following this logic :
+ - __"public" folder__ : the html file => the app template
+ - __"src"__ folder : 
+       the __"index.js"__ file at the root = the global set up of the app
+        // __"routes"__ contains the file for the routing building og the app
+        // __"assets"__ contains the pictures of the app, and the global style files
+        // __"components"__ folder contains folders for each little components of the app with 2 files each (one for the setting up, and one for the style of the component)
+        // __"datas"__ contains 2 datas files used in the app
+        // __"pages"__ contains folders for each global pages components of the app
+        
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +83,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# kasa
+
+
+

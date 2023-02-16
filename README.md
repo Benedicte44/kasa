@@ -1,6 +1,7 @@
 # kasa
 
 Kasa is a real estate add React app, waiting for its backend building.
+The app is published at a netlify link : https://kasa-annonces-location-saisonniere.netlify.app
 
 The files used to build the app is architectured following this logic :
  - __"public" folder__ : the html file => the app template
